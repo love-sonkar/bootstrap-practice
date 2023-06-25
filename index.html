@@ -72,11 +72,12 @@
     ></script>
     <script>
       let pathvalue;
+      let baseUrl = "/bootstrap-practice";
       function PathChanger(el) {
         pathvalue = el.value;
       }
       $("#btn-submit").click(function () {
-        window.location = `/bootstrap-practice${pathvalue}`;
+        window.location = `${baseUrl}${pathvalue}`;
       });
     </script>
   </body>
