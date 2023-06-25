@@ -28,15 +28,18 @@
     </header>
 
     <div class="container p-4">
+      <div class="alert alert-danger" id="error" role="alert">
+        Please Select One
+      </div>
       <div class="row">
         <div class="col d-flex justify-content-center">
           <div class="input-group">
             <select
               name="selectform"
               class="form-select"
-              onclick="PathChanger(this)"
+              onchange="PathChanger(this)"
             >
-              <option selected>Select Here To See Code</option>
+              <option selected disabled>Select Here To See Code</option>
               <option value="/day1/index.html">Day1</option>
               <option value="/day2-carousel/index.html">Day2 Carousel</option>
             </select>
@@ -57,13 +60,18 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      let pathvalue;
+      let pathvalue = "";
       let baseUrl = "/bootstrap-practice";
       function PathChanger(el) {
         pathvalue = el.value;
       }
+      $("#error").hide();
       $("#btn-submit").click(function () {
-        window.location = `${baseUrl}${pathvalue}`;
+        if (pathvalue === "") {
+          $("#error").fadeIn();
+        } else {
+          window.location = `${baseUrl}${pathvalue}`;
+        }
       });
     </script>
   </body>
