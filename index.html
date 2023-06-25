@@ -14,8 +14,8 @@
   <body>
     <header class="navbar bg-info navbar-expand-md">
       <div class="container">
-        <div class="navbar-brand">
-          <h2 class="text-white">Logo</h2>
+        <div class="navbar-brand mx-md-auto">
+          <h2 class="text-white">Love Sonkar</h2>
         </div>
         <button
           class="navbar-toggler"
@@ -24,38 +24,24 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="nav">
-          <ul class="navbar-nav ms-auto text-white">
-            <li class="nav-list">
-              <a href="#" class="nav-link active text-white">Home</a>
-            </li>
-            <li class="nav-list">
-              <a href="/day1/index.html" class="nav-link text-white">day1</a>
-            </li>
-            <li class="nav-list">
-              <a href="/day2-carousel/index.html" class="nav-link text-white"
-                >Carousel</a
-              >
-            </li>
-          </ul>
-        </div>
       </div>
     </header>
 
     <div class="container p-4">
       <div class="row">
         <div class="col d-flex justify-content-center">
-          <select
-            name="selectform"
-            class="form-select"
-            aria-label="Default select example"
-            onclick="PathChanger(this)"
-          >
-            <option selected>Select Here To See Code</option>
-            <option value="/day1/index.html">day1</option>
-            <option value="/day2-carousel/index.html">day2 carousel</option>
-          </select>
-          <button class="btn btn-primary" id="btn-submit">Submit</button>
+          <div class="input-group">
+            <select
+              name="selectform"
+              class="form-select"
+              onclick="PathChanger(this)"
+            >
+              <option selected>Select Here To See Code</option>
+              <option value="/day1/index.html">Day1</option>
+              <option value="/day2-carousel/index.html">Day2 Carousel</option>
+            </select>
+            <button class="btn btn-primary" id="btn-submit">Submit</button>
+          </div>
         </div>
       </div>
     </div>
